@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="" rel="stylesheet">
+
+</head>
+
+<body>
+	<h1 id="logo">자바스크립트</h1>
+	<div id="nav">
+		<ul>
+			<li id="board">게시판</li>
+			<li id="gallery" class="active">갤러리</li>
+			<li id="guestbook">방명록</li>
+		</ul>
+	</div>
+	
+	<div id="content">
+		<p class="red">내용1입니다.</p>
+
+		<p class="blue">내용2입니다.</p>
+	</div>
+
+	<table border="1">
+		<thead>
+			<tr>
+				<th>이름</th>
+				<th>핸드폰</th>
+				<th>회사</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr id="n-1">
+				<td>정우성</td>
+				<td id="h-1">010-1111-1111</td>
+				<td>02-1111-1111</td>
+			</tr>
+			<tr id="n-2">
+				<td>이효리</td>
+				<td id="h-2">010-2222-2222</td>
+				<td>02-2222-2222</td>
+			</tr>
+			<tr id="n-3">
+				<td>박명수</td>
+				<td id="h-3">010-3333-3333</td>
+				<td>02-3333-3333</td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+
+<script>
+	personList = []
+	document.addEventListener('DOMContentLoaded', function(){
+		//정우성
+		let tag01 = document.querySelector('#h-1');
+		console.log(tag01);
+		
+		let personvo = {
+			name : tag01.parentElement.firstElementChild.innerText,
+			hp : tag01.innerText,
+			company : tag01.parentElement.lastElementChild.innerText
+		};
+
+		console.log(personvo);
+
+		personList[0] = personvo;
+
+		//이효리
+		let tag02 = document.querySelector('#h-2');
+		console.log(tag02);
+		
+		personvo = {
+			name : tag02.parentElement.firstElementChild.innerText,
+			hp : tag02.innerText,
+			company : tag02.parentElement.lastElementChild.innerText
+		};
+
+		console.log(personvo);
+
+		personList[1] = personvo;
+
+		//박명수
+		let tag03 = document.querySelector('#h-3');
+		console.log(tag03);
+		
+		personvo = {
+			name : tag03.parentElement.firstElementChild.innerText,
+			hp : tag03.innerText,
+			company : tag03.parentElement.lastElementChild.innerText
+		};
+
+		personList[2] = personvo
+
+		console.log(personvo);
+
+		for(let i = 0 ; i<personList.length ; i++){
+			console.log(personList[i]);
+		}
+	});
+</script>
+
+</html>

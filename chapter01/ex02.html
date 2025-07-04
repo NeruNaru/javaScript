@@ -1,0 +1,96 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>javaScript</title>
+        
+    </head>
+
+    <body>
+        <h1>자바스크립트</h1>
+
+        <script>
+
+            console.log('===============================');
+            console.log('#boolean형');
+
+            // int no = 3;      자바와는 다르게 int와 같이 자료의 형태를 적어줄 필요가 없다
+            var no = 3;
+            var srt = '안녕하세요';
+            var boo = 3>5;
+            var year, month, day;   // var year / var month / var day 같이 여러 줄에 변수를 선언할 필요가 없다
+            //바로 변수의 값을 선언해줄 필요가 없다
+
+            year = 2024;
+            console.log(year);
+
+            let no2 = 3;
+            let str2 = '안녕하세요';
+            let boo2 = 3>5;
+            let year2, month2, day2;
+            year2 = '2025';
+            console.log(year2);
+
+            console.log("===========================");
+            var name = '유재석';
+            console.log('유재석');
+
+            var name = '정우성';
+            //var형태의 변수는 동일한 이름의 다른 변수를 선언하면 이전에 선언한 변수는 없어지기 때문에 사용에 주의가 필요하다
+            console.log(name);
+
+            console.log('====================================');
+
+            console.log('#상수 선언 const');
+            const pi = 3.14;
+
+            // pi = 3.141592;   상수는 값을 변경할 수 없다
+            console.log(pi);
+
+            /*
+            상수는 변수 선언과 동시에 초기화(값을 넣는 것)를 해주어야 한다
+            const MAX;
+            MAX = 3;
+            */
+
+            console.log('====================================');
+            console.log('#값 대입시 자료형이 결정된다.');
+            let data;
+            console.log(typeof data);   //undefined
+
+            data = 15;
+            console.log(typeof data);   //number
+
+            data = '안녕하세요';
+            console.log(typeof data);   //string
+
+            data=5>3;
+            console.log(typeof data);   //boolean
+
+            //타입스크립트 => 자료형을 결정해야 한다
+
+            console.log('====================================');
+            console.log('# undefined vs null');
+
+            let myVar;
+            let myVar2 = null;
+
+            console.log(myVar);
+            console.log(myVar2);
+
+            console.log('======================================');
+            console.log('# == vs ===');
+
+            console.log('123' == 123);      //문자형이 다르더라도 모양만 같다면 같다고 출력함
+            console.log('123' === 123);      //=== 을 사용하면 java와 같이 모양만 같다고 같다고 출력하지 않는다
+            
+            console.log(myVar == myVar2);       //undefined == null
+            console.log(myVar === myVar2);       //undefined === null
+            
+            console.log('' == false);
+
+        </script>
+    </body>
+
+
+</html>

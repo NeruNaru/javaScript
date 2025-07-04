@@ -1,0 +1,56 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>javaScript</title>
+        
+    </head>
+
+    <body>
+        <h1>자바스크립트</h1>
+        <script>
+            console.log('==========================================');
+            console.log('#자바의 리스트 개념 연습문제');
+
+            //삼각형
+            let triangle = {
+                name: '삼각형',
+                width: 5,
+                height: 10,
+                area: function() {
+                    let calArea = this.width * this.height / 2;
+                    return calArea;
+                }
+            };
+            
+            console.log(triangle.area());
+            
+            //사각형
+            let rectangle = {
+                name: '사각형',
+                height: 5,
+                area: function() {
+                    let calArea = this.width * this.height;
+                    return calArea;
+                }
+            };
+
+            rectangle.width = 5;
+
+            console.log(rectangle.area());
+
+            //원
+            let circle = {};
+            circle.name = '원';
+            circle.radius = 5;
+            circle.area = function() {
+                let calArea = 3.14*this.radius*this.radius;
+                return calArea
+            };
+
+            console.log(circle.area);
+        </script>
+    </body>
+
+
+</html>

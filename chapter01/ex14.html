@@ -1,0 +1,86 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>javaScript</title>
+        
+    </head>
+
+    <body>
+        <h1>자바스크립트</h1>
+        <script>
+            console.log('==================================');
+            console.log('#배열');
+            
+            let arr00 = new Array();
+            arr00[0] = 1;
+            arr00[1] = 2;
+            arr00[2] = 3;
+            
+            console.log(arr00[1]);
+            
+            console.log('==================================');
+            //////////////////////////////////////////////////
+            
+            let arr01 = [10,20,30,40,50,60,70,80,90];
+            for(let i = 0 ; i<arr01.length ; i++) {
+                console.log('arr01[' + i + ']=' + arr01[i]);
+            }
+            
+            console.log(arr01);
+            
+            let arr02 = [];     //값 없이 배열만 선언 가능
+            arr02[0] = 1;
+            arr02[1] = 2;
+            arr02[2] = 3;
+            
+            console.log('==================================');
+            
+            let arr03 = [];
+            arr03[0] = 1;
+            arr03[1] = 1.5;
+            arr03[2] = '안녕';
+            arr03[3] = 'hello';
+            arr03[4] = 5>3;
+            arr03[5] = function(){
+                console.log('정우성');
+            };
+            
+            for(let i = 0 ; i<arr03.length ; i++) {
+                console.log('arr03[' + i + ']=' + arr03[i]);
+
+                // if(typeof arr03[i] === function) {
+                //     arr03[i];
+                // } else {
+                //     console.log(arr03[i]);
+                // }
+            }
+            
+            console.log('==================================');
+            arr03[5]();
+            
+            console.log('==================================');
+
+            let arr04 = [1, 2.5, '안녕', '박명수', '정우성','유재석'];
+            
+            console.log('==================================');
+
+            let arr05 = ['이효리'];
+            arr05[1] = '정우성';
+            arr05.push('유재석');
+            arr05.push('박명수');
+
+            console.log(arr05);
+
+            arr05.pop()
+            console.log(arr05);
+
+            //
+            arr05.splice(1,2);
+            console.log(arr05);
+
+            </script>
+            </body>
+
+
+</html>

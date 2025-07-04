@@ -1,0 +1,38 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>javaScript</title>
+        
+    </head>
+
+    <body>
+        <h1>자바스크립트</h1>
+        <script>
+            console.log('===========================================');
+            console.log('#함수');
+
+            //자바에서의 함수
+            /*
+            public int plus(int a, int b) {
+                int sum = a+ b;
+                return num;
+            }
+            */
+            //자바 스크립트에서의 함수
+            
+            function plus(a, b) {
+                let sum = a + b;
+                return sum;     // 자료형이 없기 때문에 오류가 발생한다
+            }
+            
+
+            let sum = plus(6, 4);
+            console.log(sum);
+
+            console.log(plus(6, 4));
+        </script>
+    </body>
+
+
+</html>

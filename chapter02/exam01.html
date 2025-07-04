@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="" rel="stylesheet">
+
+</head>
+
+<body>
+	
+	<!--아이디-->
+	<ul>
+		<li id="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
+		<li id="second"> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </li>
+		<li id="third"> 텍스트3 텍스트3 텍스트3 텍스트3 텍스트3 </li>
+		<li id="fourth"> 텍스트4 텍스트4 텍스트4 텍스트4 텍스트4 </li>
+		<li id="first"> 텍스트1-1 텍스트1-1 텍스트1-1 텍스트1-1 텍스트1-1 </li>
+	</ul>
+
+
+</body>
+<!-------------------------------------------------------------------------------->
+<script>
+//돔트리 완료되었을때
+//html은 document에서 관리함.
+document.addEventListener('DOMContentLoaded', function(){
+	console.log('돔트리 완료');
+	// id='secnond를 빨간색'
+	let seTagRed = document.getElementById('second');
+	seTagRed.style.color = '#ff0000';
+
+	//id='third'를 파란색
+	let seTagBlue = document.getElementById('third');
+	seTagBlue.style.color = '#0000ff';
+
+	//id='forth'를 초록색
+	let seTagGreen = document.getElementById('forth');
+	seTagGreen.style.color = '#00ff00';
+
+	//id='fifth'를 분홍색
+	let seTagPink = document.getElementById('fifth');
+	seTagPink.style.color = '#ff00ff';
+});
+
+//랜더트리 완료되었을 때
+window.addEventListener('load', function(){
+	console.log('페어링까지 완료');
+});
+
+</script>
+<!-------------------------------------------------------------------------------->
+
+</html>

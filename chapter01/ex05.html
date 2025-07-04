@@ -1,0 +1,65 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>javaScript</title>
+        
+    </head>
+
+    <body>
+        <h1>자바스크립트</h1>
+        <script>
+            console.log('==================================');
+            console.log('# switch case문');
+            let code = window.prompt('과목코드를 입력해 주세요.');
+            console.log(code);
+            console.log(typeof code);
+            
+            /*
+            //code의 문자형이 string이고 switch의 비교 방법은 문자형 또한 같아야하기 때문에 case 또한 string 형으로 ''를 붙여준다
+            
+            switch(code) {
+                case '1':
+                    console.log('101호');
+                    break;
+                case '2':
+                    console.log('102호');
+                    break;
+                case '3':
+                    console.log('103호');
+                    break;
+                case '4':
+                    console.log('104호');
+                    break;
+                default :
+                    console.log('상담원');
+                    break;
+            }
+            */
+            //방법 2. switch는 문자형까지 확인하는 비교형이기 때문에 code 변수 자체를 number 형으로 변경한다
+
+            let no = Number.parseInt(code);
+            console.log(typeof no);
+
+            switch(no) {
+                case 1:
+                    console.log('101호');
+                    break;
+                case 2:
+                    console.log('102호');
+                    break;
+                case 3:
+                    console.log('103호');
+                    break;
+                case 4:
+                    console.log('104호');
+                    break;
+                default :
+                    console.log('상담원');
+                    break;
+            }
+        </script>
+    </body>
+
+
+</html>

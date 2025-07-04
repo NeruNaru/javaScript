@@ -1,0 +1,72 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>javaScript</title>
+        
+    </head>
+
+    <body>
+        <h1>자바스크립트</h1>
+
+        <script>
+            window.console.log("hello JavaScript");     //window(브라우저를 의미함 ) => 생략가능
+
+            console.log("========================================");
+            //number, string
+            console.log("#Data-type");
+            console.log(typeof 1);
+            console.log(typeof 1.5);
+            console.log(typeof '한');
+            console.log(typeof '안녕하세요');
+            console.log(typeof (5>3));
+            console.log(typeof (5<3));
+
+            console.log('===============================');
+            console.log('#number형');
+            console.log(13+5);
+            console.log(13-5);
+            console.log(13*5);
+            console.log(13/5);
+            console.log(13%5);  //나머지
+            
+            console.log(13+5.2);
+            console.log(5+3*2);     //5+6이 되기를 기대
+            console.log((5+3)*2);   //8*2가 되기를 기대
+
+            console.log('================================');
+            console.log('#string형');
+            console.log('동해물과 백두산이');
+            console.log("동해물과 백두산이");    //기존의 따옴표(') 형태가 아니라 쌍따옴표(") 형태로 제작
+            
+            console.log('동해물과 \"백두산\ "이');
+            console.log('동해물과 "백두산"이');
+
+            console.log('동해물과 \'백두산\'이');
+            console.log("동해물과 '백두산'이");
+            
+            console.log("동해물과 백\n두산이");
+            console.log("동해물과 백\t두산이");
+            console.log("동\\해물과 백두산이");
+
+            console.log("동해물과" + "1234" + "백두산이");
+
+            console.log("=====================================");
+            console.log("#boolean형");
+            console.log(5>254);
+            console.log(5<254);
+
+            console.log("# && ||");
+            console.log((5>3)&&(5<3));     // T&&T  =>  f
+            console.log((5>3)||(5<3));      // T||F =>  T
+
+            console.log(!(5>3)||(5<3));      // T||F =>  T
+            console.log( !(5>3) );
+
+            
+
+        </script>
+    </body>
+
+
+</html>
