@@ -65,6 +65,29 @@
 </body>
 
 <script>
+document.addEventListener('DOMContentLoaded', function(){
+	console.log('돔트리완료');
+
+	let p11Tag = document.querySelector('#p11');
+	console.log(p11Tag);
+	console.log(p11Tag.innerHTML);
+	console.log(p11Tag.innerText);
+	console.log(p11Tag.textContent);
+
+	//#p13태그에서 텍스트를 => "<strong>가나다라마바사아자차카타파하</strong>"
+	//<p id="p13">문장1</p>
+	let t13Tag = document.querySelector('#p13');
+	t13Tag.textContent = '<strong>가나다라마바사아자차카타파하</strong>';
+
+	let t14Tag = document.querySelector('#p14');
+	t14Tag.innerHTML = '<strong>가나다라마바사아자차카타파하</strong>';
+
+	//요소의 값(content => 글자)을 없애는 법
+	let t01Tag = document.querySelector('#p1');
+	console.log(t01Tag);
+	t01Tag.textContent = '';
+
+});
 </script>
 
 </html>

@@ -39,14 +39,136 @@
 		<button id="btnEqual" type="button">=</button>
 		<button id="btnMinus" type="button">-</button>
 		<br>
-	</div>
-	
-	
+	</div>	
 </div>
-
-
 </body>
+<script>
+	document.addEventListener('DOMContentLoaded', function(){
 
+		//버튼정리
+		let btn01 = document.querySelector('#btn1');
+		let btn02 = document.querySelector('#btn2');
+		let btn03 = document.querySelector('#btn3');
+		let btn04 = document.querySelector('#btn4');
+		let btn05 = document.querySelector('#btn5');
+		let btn06 = document.querySelector('#btn6');
+		let btn07 = document.querySelector('#btn7');
+		let btn08 = document.querySelector('#btn8');
+		let btn09 = document.querySelector('#btn9');
+		let btn00 = document.querySelector('#btn0');
+		let btnPlus = document.querySelector('#btnPlus');
+		let btnMinus = document.querySelector('#btnMinus');
+		let btnDiv = document.querySelector('#btnDiv');
+		let btnMulti = document.querySelector('#btnMulti');
+		let btnEqual = document.querySelector('#btnEqual');
+		let btnClear = document.querySelector('#btnClear');
+
+		//결과창
+		let resultTag = document.querySelector('#display');
+		console.log(resultTag);
+
+		//클릭했을 때
+		btn01.addEventListener('click',function(){
+			console.log('press01');
+
+			resultTag.value += '1';
+		});
+
+		btn02.addEventListener('click',function(){
+			console.log('press02');
+
+			resultTag.value += '2';
+		});
+
+		btn03.addEventListener('click',function(){
+			console.log('press03');
+
+			resultTag.value += '3';
+		});
+
+		btn04.addEventListener('click',function(){
+			console.log('press04');
+
+			resultTag.value += '4';
+		});
+
+		btn05.addEventListener('click',function(){
+			console.log('press05');
+
+			resultTag.value += '5';
+		});
+
+		btn06.addEventListener('click',function(){
+			console.log('press06');
+
+			resultTag.value += '6';
+		});
+
+		btn07.addEventListener('click',function(){
+			console.log('press07');
+
+			resultTag.value += '7';
+		});
+
+		btn08.addEventListener('click',function(){
+			console.log('press08');
+
+			resultTag.value += '8';
+		});
+
+		btn09.addEventListener('click',function(){
+			console.log('press09');
+
+			resultTag.value += '9';
+		});
+
+		btn00.addEventListener('click',function(){
+			console.log('press00');
+
+			resultTag.value += '0';
+		});
+
+		btnPlus.addEventListener('click',function(){
+			console.log('pressPlus');
+
+			resultTag.value += '+';
+		});
+
+		btnMinus.addEventListener('click',function(){
+			console.log('pressMinus');
+
+			resultTag.value += '-';
+		});
+		
+		btnMulti.addEventListener('click',function(){
+			console.log('pressMulti');
+
+			resultTag.value += '*';
+		});
+
+		btnDiv.addEventListener('click',function(){
+			console.log('pressDiv');
+
+			resultTag.value += '/';
+		});
+
+		//계산기에서 가장 중요한 부분
+		btnEqual.addEventListener('click',function(){
+			console.log('pressEqual');
+
+			try {
+				resultTag.value = eval(resultTag.value)
+			} catch(error) {
+				console.log('error');
+			}
+		});
+
+		btnClear.addEventListener('click', function(){
+			console.log('pressClear');
+			resultTag.value = '';
+		});
+	});
+</script>
 
 
 

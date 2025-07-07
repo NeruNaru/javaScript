@@ -16,6 +16,7 @@
 	<div>
         <h1 id="display">이름출력영역</h1>
         <button id="btn" type="button">테스트버튼</button>
+        <p></p>
     </div>
     
 
@@ -23,7 +24,45 @@
 </body>
 
 <script>
+    //돔트리가 완료되었을 때(이벤트)
+document.addEventListener('DOMContentLoaded', function(){
+    console.log('돔트리완료');
 
+    //버튼이 클릭 되었을 때 ==> h1 글자를 홍길동으로 적용/글자색을 파란색으로 적용
+    //실제 작동은 이벤트가 발생 했을 때(버튼이 클릭 되었을 때)
+    let btnTag = document.querySelector('#btn');
+
+    //버튼이 클릭 되었을 때(이벤트)
+    btn.addEventListener('click', function(){
+        console.log('버튼클릭');
+        
+        //h1요소를 잡아온다
+        let h1Tag = document.querySelector('#display');
+        //-h1을 글자 홍길동으로 적용
+        //-글자 색을 파란색으로 적용
+        h1Tag.textContent = '홍길동';
+        h1Tag.style.color = '#0000ff';
+        
+    });
+
+    let btnhvTag = document.querySelector('#btn');
+
+    btn.addEventListener('mouseover', function(){
+        console.log('버튼호버');
+
+        let pTag = document.querySelector('p');
+        pTag.textContent = '테스트버튼을 클릭시 홍길동이 표시됩니다';
+    });
+
+    let btnoutTag = document.querySelector('#btn');
+
+    btn.addEventListener('mouseout', function(){
+        console.log('버튼아웃');
+
+        let pTag = document.querySelector('p');
+        pTag.textContent = '';
+    });
+});
 
 </script>
 

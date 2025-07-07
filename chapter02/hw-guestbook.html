@@ -61,7 +61,41 @@
 </body>
 
 <script>
+document.addEventListener('DOMContentLoaded', function(){
+    let btnTag = document.querySelector('#btnGetDate');
+        console.log('돔트리완료');
 
+    btnTag.addEventListener('click', function(){
+        let personList = [];
+
+        let tableTags = document.querySelectorAll('#dataArea>table');
+        console.log(tableTags);
+        console.log(tableTags[0].children[0].children[0].children[0].textContent);
+        // console.log(tableTags[0].children[0].innerText);
+
+        for(let i = 0 ; i<tableTags.length ; i++) {
+            let no = tableTags[i].children[0].children[0].children[0].textContent
+            let name = tableTags[i].children[0].children[0].children[1].textContent
+            let regDate = tableTags[i].children[0].children[0].children[2].textContent
+            let content = tableTags[i].children[0].children[1].children[0].textContent
+
+            let guestvo = {
+                    no : no,
+                    name : name,
+                    regDate : regDate,
+                    content : content
+            };
+
+            personList.push(guestvo);
+        };
+
+        for(let i = 0 ; i<personList.length ; i++) {
+            console.log(personList[i].no + '. ' + personList[i].name + '(' + personList[i].regDate + ')');
+        }
+        
+        
+    });
+});
 
 </script>
 

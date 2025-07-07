@@ -17,11 +17,40 @@
 		<li>여섯번째아이템입니다.</li>
 	</ul>
 	
-
+	<p id="p01" style="color: #0000ff">안녕하세요</p>
 </body>
 
 <script>
+document.addEventListener('DOMContentLoaded',function(){
+	console.log('완료');
 
+	//html가져오기
+	let ulTag = document.querySelector('ul');
+
+	//css적용하기
+	ulTag.style.fontSize = '40px';					//fontSize
+	ulTag.style.border = '1px solid #ff0000';		//border
+	
+
+	//첫번쨰 li만 글꼴 변경하기
+	ulTag.firstElementChild.style.fontFamily = '궁서'; //fontFamily
+
+
+	ulTag.firstElementChild.style.backgrounColor = '#d6d6d6';	//backgrounColor
+	ulTag.firstElementChild.style.width = '40px';				//width
+	ulTag.firstElementChild.style.padding = '10px 20px 30px 40px';  //padding
+	ulTag.firstElementChild.style.marginLeft = '40px';			//margin
+
+	ulTag.lastElementChild.style.borderWidth = '40px';
+	ulTag.lastElementChild.style.borderStyle = 'dotted';
+	ulTag.lastElementChild.style.borderColor = '#ff0000';
+
+	//p1을 빨간색으로 변경
+	let p01Tag = document.querySelector('#p01');
+	console.log(p01Tag);
+
+	p01Tag.style.color = 'red';
+});
 </script>
 
 </html>

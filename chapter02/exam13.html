@@ -23,7 +23,38 @@
 </body>
 
 <script>
+document.addEventListener('DOMContentLoaded',function(){
+    console.log('돔트리완료');
 
+    //#버튼을 잡아온다
+    let btnTag = document.querySelector('#btnPlus');
+
+    //버튼을 클릭할 때
+    btnTag.addEventListener('click',function(){
+        console.log('버튼클릭');
+        //--첫번째 창의 값 가져오기
+        let leftTag = document.querySelector('#left');
+        let rightTag = document.querySelector('#right');
+        let totalvalue = document.querySelector('#display');
+        
+        //--두번쨰 창의 값 가져오기
+        let leftvalue = Number.parseInt(leftTag.value);
+        let rightvalue = Number.parseInt(rightTag.value)
+
+        //      -- 두 값을 더하기
+        let sum = leftvalue + rightvalue;
+        console.log(sum);
+
+        //      == p요소에 결과값 적용하기
+        console.log('결과값');
+        totalvalue.textContent = sum;
+
+        //입력창을 비우기
+        leftTag.value = '';
+        rightTag.value = '';
+    });
+
+});
 </script>
 
 </html>
