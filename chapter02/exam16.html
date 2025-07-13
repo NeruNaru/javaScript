@@ -1,0 +1,77 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>javaScript</title>
+        
+        <style>
+            ul {
+                background-color: #ff00ff;
+                padding: 10px;
+                width: 300px;
+            }
+
+            ul>li {
+                border: 1px solid #000000;
+                background-color: #ffffff;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <ul>    <!--begin-->
+            <!--afterbegin-->
+            <li>1번째 아이템 입니다.</li>
+            <li>2번째 아이템 입니다.</li>
+            <li>3번째 아이템 입니다.</li>
+            <li>4번째 아이템 입니다.</li>
+            <li>5번째 아이템 입니다.</li>
+            <li>6번째 아이템 입니다.</li>
+            <li>7번째 아이템 입니다.</li>
+            <li>8번째 아이템 입니다.</li>
+            <li>9번째 아이템 입니다.</li>
+            <li>10번째 아이템 입니다.</li>
+            <!--beforeend-->
+        </ul>   <!--end-->
+
+        
+    </body>
+    <script>
+        //돔트리
+        document.addEventListener('DOMContentLoaded',function(){
+            console.log('돔트리완료');
+
+            let tag = document.querySelector('li');
+            console.log(tag);
+
+            let liTags = document.querySelectorAll('li');
+            console.log(liTags);
+
+            for(let i = 0 ; i<liTags.length ; i++) {
+                liTags[i].addEventListener('click',function(){
+                    console.log('클릭' + (i + 1) + '번');
+                });
+            }
+
+            let reTags = document.querySelectorAll('li');
+            console.log(reTags);
+
+            for(let i = 0 ; i<reTags.length ; i++) {
+                reTags[i].addEventListener('dblclick',function(event){
+                    
+                    console.log((i+1) + '번 삭제');
+                    // console.log(this);
+                    // this.remove();
+                    this.insertAdjacentHTML = "";
+
+                    //원래는 this와 event.target의 값이 다를 수 있다 ==> 지금 상황에서는 값이 같다
+                    console.log(this);
+                    console.log(event.target);
+                });
+            }
+            
+        });
+    </script>
+
+</html>

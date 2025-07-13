@@ -1,0 +1,73 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>javaScript</title>
+        <style>
+            ul {
+                background-color: #ff00ff;
+                padding: 10px;
+                width: 300px;
+            }
+
+            ul>li {
+                border: 1px solid #000000;
+                background-color: #ffffff;
+            }
+        </style>
+    </head>
+
+    <body>
+        <ul>    <!--begin-->
+            <!--afterbegin-->
+            <li>1번째 아이템 입니다.</li>
+            <li>2번째 아이템 입니다.</li>
+            <li>3번째 아이템 입니다.</li>
+            <li>4번째 아이템 입니다.</li>
+            <li>5번째 아이템 입니다.</li>
+            <!--beforeend-->
+        </ul>   <!--end-->
+
+        <button id="btn-after" type="button">뒤에추가</button>
+    </body>
+
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            console.log('돔트리완료');
+            let btnAfter = document.querySelector('#btn-after');
+            btnAfter.addEventListener('click',function(){       //이 때 추가하는 리스트들은 돔트리가 완료된 후에 추가된 것이기 때문에 클릭 이벤트에 반응하지 않는다!!!!!!!
+                let ulTag = document.querySelector('ul');
+                
+                let strHtml = '<li>뒤에추가</li>';
+                
+                ulTag.insertAdjacentHTML('beforeend',strHtml);
+                });
+                
+            /*
+            let liTags = document.querySelectorAll('li');
+            
+            for(let i = 0 ; i<liTags.length ; i++) {
+                liTags[i].addEventListener('click', function(event){
+                    console.log('클릭');
+
+                    event.target.remove();
+                });
+            }
+            */
+            //부모(ul요소)에 클릭 이벤트를 등록해준다
+            //이벤트가 발생하면 할 일은 자식에게 전달해라
+
+            let ulTag = document.querySelector('ul');
+            ulTag.addEventListener('click',function(event){
+                console.log('ul클릭');
+
+                console.log(this);
+                console.log(event.target)
+                if(event.target.tagName == 'LI') {
+                    event.target.remove();
+                }
+            });
+        });
+    </script>
+
+</html>

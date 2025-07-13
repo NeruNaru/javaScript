@@ -1,0 +1,71 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>javaScript</title>
+        
+        <style>
+            ul {
+                background-color: #ff00ff;
+                padding: 10px;
+                width: 300px;
+            }
+
+            ul>li {
+                border: 1px solid #000000;
+                background-color: #ffffff;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <ul>    <!--begin-->
+            <!--afterbegin-->
+            <li>1번째 아이템 입니다.</li>
+            <li>2번째 아이템 입니다.</li>
+            <li>3번째 아이템 입니다.</li>
+            <li>4번째 아이템 입니다.</li>
+            <li>5번째 아이템 입니다.</li>
+            <!--beforeend-->
+        </ul>   <!--end-->
+
+        <button id="btn-before" type="button">앞에추가</button>
+        <button id="btn-after" type="button">뒤에추가</button>
+        
+    </body>
+    <script>
+        //돔트리
+        document.addEventListener('DOMContentLoaded',function(){
+            console.log('돔트리완료');
+
+            //'앞에추가'버튼에 클릭이벤트 등록하기
+            let btnBefore = document.querySelector('#btn-before');
+            console.log(btnBefore);
+            btnBefore.addEventListener('click',function(){
+                console.log('앞에추가버튼-클릭');
+
+                let strHtml = '<li>앞에 추가된 아이템입니다</li>'
+
+                let ulTag = document.querySelector('ul');
+                ulTag.insertAdjacentHTML('afterbegin',strHtml);
+            });
+            
+            //'뒤에추가'버튼에 클릭 이벤트 등록하기
+            let btnAfter = document.querySelector('#btn-after');
+            console.log(btnAfter);
+
+            btnAfter.addEventListener('click',function(){
+                console.log('뒤에추가버튼-클릭');
+
+                let strHtml = '<li>뒤에 추가된 아이템입니다</li>'
+
+                let ulTag = document.querySelector('ul');
+                ulTag.insertAdjacentHTML('beforeend',strHtml)
+
+            });
+
+        });
+    </script>
+
+</html>
