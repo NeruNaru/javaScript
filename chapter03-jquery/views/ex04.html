@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<script src="../assets/js/jquery-3.7.1.js"></script>
 
 <title>Insert title here</title>
 </head>
@@ -29,7 +30,13 @@
 	<input type="text" name="password">
 	
 </body>
+<script>
+	$(document).ready(function(){
+		console.log('돔트리완료');
 
+		$('[class]').css('color','#ff0000');
+	});
+</script>
 
 
 </html>

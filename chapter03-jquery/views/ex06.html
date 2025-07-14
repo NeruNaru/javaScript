@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
+<script src="../assets/js/jquery-3.7.1.js"></script>
 
 <title>Insert title here</title>
 </head>
@@ -14,6 +14,20 @@
 	<p id="p2"> 학교종이 땡땡땡<br> abcdefg </p>
 </body>
 
+<script>
+	$(document).ready(function(){
+		console.log('돔트리완료');
 
+		let str = '가나다라마바사';
+
+		let p1Tag = $('#p1');
+		console.log(p1Tag);
+		p1Tag.text(str);
+
+		let p2Tag = $('#p2');
+		console.log(p2Tag.html());
+		console.log(p2Tag.text());
+	});
+</script>
 
 </html>

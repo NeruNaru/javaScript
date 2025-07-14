@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="./jquery/jquery-1.12.4.js"></script>
+<script src="../assets/js/jquery-3.7.1.js"></script>
 
 <title>Insert title here</title>
 </head>
@@ -13,7 +13,18 @@
 	<p id="p1"> abcdefghijklmn </p>
 	<p id="p2"> 학교종이 땡땡땡 abcdefg </p>
 </body>
+<script>
+	$(document).ready(function(){
+		console.log('돔트리완료');
 
+		let p1Tag = $('#p1');
+		p1Tag.text('가나다라마바사');
+
+		let p2Tag = $('p#2');
+		console.log(p2Tag.text());
+		
+	});
+</script>
 
 
 

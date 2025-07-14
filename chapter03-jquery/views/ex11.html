@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
+<script src="../assets/js/jquery-3.7.1.js"></script>
 
 <style>
 	.red {color: red;}
@@ -29,7 +29,27 @@
 	<textarea name="content2">산토끼토끼야</textarea>
 	
 </body>
+<script>
+	$(document).ready(function(){
+		console.log('돔트리완료');
+		
+		let nameTag = $('input[name="name"]');
+		nameTag.val('정우성');
 
+		let pwTag = $('[name="password"]');
+		pwTag.val('1234');
+
+		let txTag = $('[name="content"]');
+		txTag.val('학교종이 땡땡땡');
+
+		let name2Tag = $('input[name="name2"]');
+		let pw2Tag = $('input[name = "password2"]');
+		let tx2Tag = $('[name="content2"]');
+
+		console.log('name: ' + name2Tag.val() + ', password: ' + pw2Tag.val() + ', content: ' + tx2Tag.text());
+
+	});
+</script>
 
 </html>
 
