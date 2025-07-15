@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
+<script src="../assets/js/jquery-3.7.1.js"></script>
 
 <title>Insert title here</title>
 </head>
@@ -17,6 +17,20 @@
 	</ul>
 	<button>버튼</button>
 </body>
+<script>
+	$(document).ready(function(){
+		console.log('돔트리완료');
 
+		$('li').on('click',function(){
+			console.log('ul클릭감지');
+
+			var $this = $(this);
+			
+			$this.text('변경된문구입니다');
+			
+		});
+	});
+
+</script>
 
 </html>

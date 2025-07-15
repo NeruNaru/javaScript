@@ -19,8 +19,11 @@
 		console.log('돔트리완료');
 
 		$('#btn').on("click", function(){
-			$('#display').remove();
-			$('#display').add('홍길동');
+			console.log("클릭감지");
+
+			$('#display').text('홍길동');
+			$('#display').css('color', '#0000ff');
+
 		});
 	});
 </script>
